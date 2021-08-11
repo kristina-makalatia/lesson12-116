@@ -1,0 +1,50 @@
+.image {
+    width: 100%;
+}
+.navigation-wraper {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightblue;
+    padding: 20px;
+}
+.navbar-links ul {
+    display: flex;
+}
+.navbar-links ul li {
+    margin: 10px;
+}
+
+/* Burger Bar styles */
+.toggle-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    color: #fff;
+    display: none;
+}
+
+/* responsive code */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+    .toggle-button {
+        display: block;
+    }
+
+    /* როდესაც დავაწვები ბურგერს რა ვიხუალით უნდა გამოჩნდეს ჩემი დამალული ნავიგაცია */
+    .navigation-wraper {
+        flex-direction: column;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+    }
+    .navbar-links ul li {
+        text-align: center;
+    }
+    .navbar-links.active {
+        display: block;
+    }
+    
+}
